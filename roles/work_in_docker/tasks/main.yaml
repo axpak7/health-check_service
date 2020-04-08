@@ -1,0 +1,23 @@
+---
+- name: Docker Login
+  shell: 'docker login docker.com -u {{ansible_user}} -p {{ansible_ssh_pass}}'
+
+- name: See running containers
+  shell: docker ps --filter name=tomcat -q
+  register: run_list
+
+- name: See all containers
+  shell: docker ps --filter name=tomcat -aq
+  register: stop_list
+
+- set_fact:
+    diff: '{{ (stop_list.stdout_lines | difference(run_list.stdout_lines)) | length }}'
+    run: '{{ run_list.stdout_lines | length }}'
+
+- name: Remove previus containers
+  shell: docker stop tomcat && docker rm tomcat
+  when: diff | int != 0
+
+- name: Run Tomcat container
+  shell: 'docker run -d -p 8080:8080 danpil/nxbootcamp:pak.alexey.healthcheck_service.{{ version }}'
+  when: diff | int != 0 or run | int == 0

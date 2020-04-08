@@ -1,0 +1,9 @@
+---
+- name: Installing and configurating Docker
+  hosts: all
+  gather_facts: false
+  become: true
+
+  roles:
+    - install_docker
+    - work_in_docker
