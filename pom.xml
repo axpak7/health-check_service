@@ -38,6 +38,14 @@
     </dependency>
   </dependencies>
 
+  <distributionManagement>
+    <repository>
+      <id>corp1</id>
+      <name>healthcheck_service</name>
+      <url>file:///home/desim/documents/qwe</url>
+    </repository>
+  </distributionManagement>
+
   <build>
     <finalName>healthcheck_service</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -103,5 +111,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
   </build>
 </project>
