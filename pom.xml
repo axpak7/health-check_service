@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.nexign.btd.pak.alexey</groupId>
-  <artifactId>healthcheck_service</artifactId>
+  <artifactId>healthApp</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
@@ -41,20 +41,18 @@
   <distributionManagement>
     <repository>
       <id>corp1</id>
-      <name>healthcheck_service</name>
+      <name>healthApp</name>
       <url>file:///home/desim/documents/qwe</url>
     </repository>
   </distributionManagement>
 
   <build>
-    <finalName>healthcheck_service</finalName>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <finalName>healthApp</finalName>
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
@@ -94,6 +92,7 @@
           <version>1.4.13</version>
           <executions>
             <execution>
+              <phase>deploy</phase>
               <id>default</id>
               <goals>
                 <goal>build</goal>
@@ -110,7 +109,6 @@
           </configuration>
         </plugin>
       </plugins>
-    </pluginManagement>
 
   </build>
 </project>
