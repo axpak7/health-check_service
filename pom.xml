@@ -38,11 +38,19 @@
     </dependency>
   </dependencies>
 
-  <distributionManagement>
+  <!--<distributionManagement>
     <repository>
       <id>corp1</id>
       <name>healthApp</name>
       <url>file:///home/desim/documents/qwe</url>
+    </repository>
+  </distributionManagement>-->
+
+  <distributionManagement>
+    <repository>
+      <id>hc-service</id>
+      <name>healthApp</name>
+      <url>file:/doce/healthApp</url>
     </repository>
   </distributionManagement>
 
