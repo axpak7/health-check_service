@@ -48,10 +48,16 @@
 
   <distributionManagement>
     <repository>
-      <id>hc-service</id>
-      <name>healthApp</name>
-      <url>file:/doce/healthApp</url>
+      <id>release</id>
+      <name>Internal Releases</name>
+      <url>https://artifactory.billing.ru/artifactory/peterservice-releases</url>
     </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>Internal Snapshots</name>
+      <url>https://artifactory.billing.ru/artifactory/peterservice-snapshots</url>
+    </snapshotRepository>
+
   </distributionManagement>
 
   <build>
