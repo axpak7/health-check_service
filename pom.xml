@@ -42,7 +42,7 @@
     <repository>
       <id>corp1</id>
       <name>healthApp</name>
-      <url>file:///home/doce/qwe</url>
+      <url>file://qwe</url>
     </repository>
   </distributionManagement>
 
