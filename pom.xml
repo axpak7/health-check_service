@@ -38,15 +38,15 @@
     </dependency>
   </dependencies>
 
-  <!--<distributionManagement>
+  <distributionManagement>
     <repository>
       <id>corp1</id>
       <name>healthApp</name>
-      <url>file:///home/desim/documents/qwe</url>
+      <url>file:///home/doce/qwe</url>
     </repository>
-  </distributionManagement>-->
+  </distributionManagement>
 
-  <distributionManagement>
+<!--  <distributionManagement>
     <repository>
       <id>release</id>
       <name>Internal Releases</name>
@@ -58,7 +58,7 @@
       <url>https://artifactory.billing.ru/artifactory/peterservice-snapshots</url>
     </snapshotRepository>
 
-  </distributionManagement>
+  </distributionManagement>-->
 
   <build>
     <finalName>healthApp</finalName>
