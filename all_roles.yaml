@@ -1,6 +1,6 @@
 ---
 - name: Installing and configurating Docker
-  hosts: all
+  hosts: virtual_servers
   gather_facts: false
   become: true
 
